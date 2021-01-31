@@ -26,7 +26,6 @@ import (
 	"github.com/kristjank/nameservice/app"
   // this line is used by starport scaffolding # 1
 )
-
 func main() {
 	// Configure cobra to sort commands
 	cobra.EnableCommandSorting = false
@@ -141,7 +140,7 @@ func registerRoutes(rs *lcd.RestServer) {
 	client.RegisterRoutes(rs.CliCtx, rs.Mux)
 	authrest.RegisterTxRoutes(rs.CliCtx, rs.Mux)
 	app.ModuleBasics.RegisterRESTRoutes(rs.CliCtx, rs.Mux)
-  // this line is used by starport scaffolding # 2
+	// this line is used by starport scaffolding # 2
 }
 
 func initConfig(cmd *cobra.Command) error {
